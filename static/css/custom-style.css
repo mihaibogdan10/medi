@@ -1,0 +1,28 @@
+#carousel-movie {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+#carousel-movie .carousel-inner {
+    position: absolute;
+    height: 100%;
+}
+
+#carousel-movie .carousel-inner>.item>img {
+    width: 100%;
+    max-width: none;
+}
+
+#btn_upload {
+    position: absolute;
+    z-index: 100;
+    top: 50%;
+    left: 43%;
+}
+
+.tab-pane {
+    margin-top: 10px;
+}
