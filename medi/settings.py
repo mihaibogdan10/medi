@@ -62,7 +62,7 @@ WSGI_APPLICATION = 'medi.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'medi-development-db',
+        'NAME': 'medi',
         'USER': DB_USER,
         'PASSWORD': DB_PASSWORD,
         'HOST': DB_HOST,
