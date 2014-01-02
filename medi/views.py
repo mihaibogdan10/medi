@@ -7,3 +7,7 @@ def home(request):
     t = loader.get_template('home.html')
     c = RequestContext(request, return_dict)
     return HttpResponse(t.render(c))
+
+def about(request):
+    t = loader.get_template('about.html')
+    return HttpResponse(t.render(RequestContext(request, {})))

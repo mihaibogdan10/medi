@@ -15,8 +15,8 @@
   </head>
   
   <body style="background-image: url({% static 'images/body-bg.jpg' %});">
-    <div id="container" class="container">
-      <div id="header" class="row padding-top" style="background-image: url({% static 'images/footer.jpg' %});">
+    <div id="wrap">
+      <div id="header" class="row padding-top no-margin" style="background-image: url({% static 'images/footer.jpg' %});">
         <div class="col-lg-offset-1 col-lg-1">
          <a href="/" class="pull-right"><img src="{% static 'images/logo2.png' %}" alt = "logo2"/></a>
         </div>
@@ -42,56 +42,61 @@
             <a href="connect">Conecteaza-te</a> 
           {% endif %}
         </div>
-      </div>
+      </div><!-- end header -->
 
-      <div id="content" class="row padding-top">
-        <div id="left-menu" class="col-lg-2">
-          <ul class="nav nav-tabs nav-stacked">
-            {% if True %}
-              <li><a href="patient" title="Pacienti">Pactienti</a></li>
-              <li><a href="statistics" title="Statistici">Statistici</a></li>
-              <li><a href="contact" title="Contact">Contact</a></li>
-              <li class="divider"></li>
-              <li><a href="about" title="Despre">Despre</a></li>
+      <div id="container" class="container"> 
+        <div id="content" class="row padding-top">
+          <div id="left-menu" class="col-lg-2">
+            <ul class="nav nav-tabs nav-stacked">
               {% if True %}
+                <li><a href="patient" title="Pacienti">Pactienti</a></li>
+                <li><a href="statistics" title="Statistici">Statistici</a></li>
+                <li><a href="contact" title="Contact">Contact</a></li>
                 <li class="divider"></li>
-                <li><a href="admin" class="left" title="Admin">Admin</a></li>
+                <li><a href="about" title="Despre">Despre</a></li>
+                {% if True %}
+                  <li class="divider"></li>
+                  <li><a href="admin" class="left" title="Admin">Admin</a></li>
+                {% endif %}
               {% endif %}
-            {% endif %}
-          </ul>
-        </div>
+            </ul>
+          </div>
           
-        <div class="col-lg-10">
-          {% block Content %}
-            <div id = "content_left" class="col-lg-offset-1 col-lg-5" style="{% block ContentLeftStyle %}{% endblock %}">
-              {% block ContentLeft %} {% endblock %}
-            </div>
-            <div id = "content_right" class="col-lg-5" style="{% block ContentRightStyle %}{% endblock %}">
-              {% block ContentRight %} {% endblock %}
-            </div>
-          {% endblock %}
+          <div class="col-lg-10">
+            {% block Content %}
+              <div id = "content_left" class="col-lg-offset-1 col-lg-5" style="{% block ContentLeftStyle %}{% endblock %}">
+                {% block ContentLeft %} {% endblock %}
+              </div>
+              <div id = "content_right" class="col-lg-5" style="{% block ContentRightStyle %}{% endblock %}">
+                {% block ContentRight %} {% endblock %}
+              </div>
+            {% endblock %}
+          </div>
         </div>
+      </div> <!-- end container -->
+      <div id="push"></div>
+    </div> <!-- end wrap -->
+
+
+    <div id="footer" class="row no-margin" style="background-image: url({% static 'images/footer.jpg' %});">
+      <div class="col-lg-offset-2 col-lg-2">
+        <ul class="list-group no-margin"> 
+          <li class="list-group-item no-border no-background mini-padding">
+            <a href="/" title="Acasa" class="purple-font"><i class="fa fa-home fa-fw"></i>Acasa</a>
+          </li>
+          <li class="list-group-item no-border no-background mini-padding">
+            <a href="contact" title="Contact" class="purple-font"><i class="fa fa-envelope-o"></i>Contact</a>
+          </li>
+          <li class="list-group-item no-border no-background mini-padding">
+            <a href="about" title="Despre" class="purple-font"><i class="fa fa-info"></i>Despre</a> 
+          </li>
+          <li class="list-group-item no-border no-background mini-padding">
+            <a href="#" title="Termeni si servicii" class="purple-font"><i class="fa fa-file-text-o"></i>Termeni si servicii</a> 
+          </li>
+        </ul>
       </div>
-    
-      <div id="footer" class="row footer" style="background-image: url({% static 'images/footer.jpg' %});">
-        <div class="col-lg-offset-2 col-lg-2">
-          <ul class="list-group no-margin"> 
-            <li class="list-group-item no-border no-background mini-padding">
-              <a href="/" title="Acasa" class="purple-font"><i class="fa fa-home fa-fw"></i>Acasa</a>
-            </li>
-            <li class="list-group-item no-border no-background mini-padding">
-              <a href="contact" title="Contact" class="purple-font"><i class="fa fa-envelope-o"></i>Contact</a>
-            </li>
-            <li class="list-group-item no-border no-background mini-padding">
-              <a href="about" title="Despre" class="purple-font"><i class="fa fa-info"></i>Despre</a> 
-            </li>
-            <li class="list-group-item no-border no-background mini-padding">
-              <a href="#" title="Termeni si servicii" class="purple-font"><i class="fa fa-file-text-o"></i>Termeni si servicii</a> 
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
+    </div> <!-- end footer -->
+
 
     <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
     <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>

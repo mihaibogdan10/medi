@@ -1,0 +1,79 @@
+{% extends 'base.html' %}
+
+{% block title %}Medi{% endblock %}
+
+{% block ContentLeft %}
+  <table>
+    <tr>
+      <td style="vertical-align: top;">
+        <div class="imgbox">
+          <img src="http://www.gravatar.com/avatar/527345be91a711b718a81b675db0542b?s=130" />
+          <div class="team">Tech Team</div>
+        </div>
+      </td>
+      <td style="vertical-align: top;">
+        <div style="margin-left: 10px;">
+          <h4>Mihai Alexandru</h4><hr />
+          <p>Software engineer @Adulmec.ro</p>
+        </div>
+      </td>
+    </tr>
+  </table>
+  <table>
+    <tr>
+      <td style="vertical-align: top;">
+        <div class="imgbox">
+          <img src="http://www.gravatar.com/avatar/59e6a0e120b1570f126aeaa7464accba?s=130" />
+          <div class="team">Tech Team</div>
+        </div>
+      </td>
+      <td style="vertical-align: top;">
+        <div style="margin-left: 10px;">
+          <h4>Mihai Bogdan</h4><hr />
+          <p>Student at the University of Bucharest, majoring in Computer Science.</p>
+        </div>
+      </td>
+    </tr>
+  </table>
+{% endblock %}
+
+{% block ContentRight %}
+  <table>
+    <tr>
+      <td style="vertical-align: top;">
+        <div class="imgbox">
+          <img src="http://www.gravatar.com/avatar/delia?s=130" />
+          <div class="team" style="margin-left: 7px;">Project Supervisor</div>
+        </div>
+      </td>
+      <td style="vertical-align: top;">
+        <div style="margin-left: 10px;">
+          <h4>Nebunu Delia</h4><hr />
+          <p>Student at Grigore T. Popa University of Medicine and Pharmacy of Iasi</p>
+        </div>
+      </td>
+    </tr>
+  </table>
+  <table>
+    <tr>
+      <td style="vertical-align: top;">
+        <div class="imgbox">
+          <img src="http://www.gravatar.com/avatar/a2cb4d254bbb642e7bad7b1d562b4108?s=130" />
+          <div class="team">Tech Team</div>
+        </div>
+      </td>
+      <td style="vertical-align: top;">
+        <div style="margin-left: 10px;">
+          <h4>L&#259;ceanu Ionu&#355; - Adrian</h4><hr />
+          <p>Student at the University of Bucharest.</p>
+          <p>"The hardest thing is to go to sleep at night, when there are so many urgent things needing to be done." - Donald Knuth</p>
+        </div>
+      </td>
+    </tr>
+  </table>
+{% endblock %}
+
+{% block js %}
+    {{block.super}}
+    <script type="text/javascript" src="/static/js/utils.js"></script>
+{% endblock %}

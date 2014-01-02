@@ -2,10 +2,6 @@
     margin: 0px !important;
 }
 
-.footer{
-    height: 137px;
-}
-
 .no-border{
     border: 0px !important;
 }
@@ -35,3 +31,37 @@ a.purple-font:link   { color: #A99DA2; }
 a.purple-font:visited{ color: #A99DA2; }
 a.purple-font:hover  { color: #A99DA2; }
 a.purple-font:active { color: #A99DA2; }
+
+/*This is for the sticky footer:
+<sticky footer>*/
+
+      html,body {
+        height: 100%;
+        /* The html and body elements cannot have any padding or margin. */
+      }
+
+      /* Wrapper for page content to push down footer */
+      #wrap {
+        min-height: 100%;
+        height: auto !important;
+        height: 100%;
+        /* Negative indent footer by it's height */
+        margin: 0 auto -137px;
+      }
+
+      /* Set the fixed height of the footer here */
+      #push, #footer {
+        height: 137px;
+      }
+
+      /* Lastly, apply responsive CSS fixes as necessary */
+      @media (max-width: 767px) {
+        #footer {
+          margin-left: -20px;
+          margin-right: -20px;
+          padding-left: 20px;
+          padding-right: 20px;
+        }
+      }
+
+/* </sticky footer> */
