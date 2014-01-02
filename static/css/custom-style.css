@@ -1,28 +1,29 @@
-#carousel-movie {
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    top: 0;
-    left: 0;
+.no-margin{
+    margin: 0px !important;
 }
 
-#carousel-movie .carousel-inner {
-    position: absolute;
-    height: 100%;
+.footer{
+    height: 137px;
 }
 
-#carousel-movie .carousel-inner>.item>img {
-    width: 100%;
-    max-width: none;
+.no-border{
+    border: 0px !important;
 }
 
-#btn_upload {
-    position: absolute;
-    z-index: 100;
-    top: 50%;
-    left: 43%;
+.no-background{
+    background: none !important;
 }
 
-.tab-pane {
-    margin-top: 10px;
+.mini-padding{
+    padding-top: 5px;
+    padding-bottom: 5px;
 }
+
+.left-padding{
+    padding-left: 10px;
+}
+
+a.purple-font:link   { color: #A99DA2; }
+a.purple-font:visited{ color: #A99DA2; }
+a.purple-font:hover  { color: #A99DA2; }
+a.purple-font:active { color: #A99DA2; }
