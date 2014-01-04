@@ -22,6 +22,7 @@
         </div>
         <div class="col-lg-offset-1 col-lg-6">
           <form class="navbar-form" role="search">
+            {% csrf_token %}
             <div class="input-group">
               <input type="text" class="form-control" placeholder="Search">
               <span class="input-group-btn">
@@ -31,15 +32,15 @@
           </form>
         </div>
         <div class="col-lg-offset-1 col-lg-1">
-          {% if True %}
+          {% if user.is_authenticated %}
             <table class="pull-right">
               <tr>
-                <td><a href="user"><img src="http://www.gravatar.com/avatar/b9a4a8dccb896d8ea5c88709940451a9?s=50" alt="avatar" title="Nume Prenume"/></a></td>
+                <td><a href="user"><img src="http://www.gravatar.com/avatar/{{ email_hash }}?s=50" alt="avatar" title="{{ full_name }}"/></a></td>
                 <td class="padding-left"><a href="logout" title="Log out"><i class="fa fa-power-off fa-2x"></i></a></td>
               </tr>
             </table>
           {% else %} 
-            <a href="connect">Conecteaza-te</a> 
+            <a href="login">Conectare</a> 
           {% endif %}
         </div>
       </div><!-- end header -->
