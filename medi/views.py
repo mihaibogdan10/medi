@@ -2,7 +2,7 @@ from django.http import HttpResponse, HttpResponseRedirect
 from django.template import RequestContext, loader
 from django.conf import settings
 from django.shortcuts import render_to_response
-from django.contrib.auth import authenticate, login
+from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.forms import AuthenticationForm
 from django.views.decorators.csrf import csrf_protect
 from forms import SignUpForm
@@ -41,6 +41,10 @@ def login_view(request):
         form = AuthenticationForm()
         return render_to_response('login.html', {'form':form},
                                   RequestContext(request))
+
+def logout_view(request):
+    logout(request)
+    return HttpResponseRedirect('/home')
 
 @csrf_protect
 def sign_up(request):

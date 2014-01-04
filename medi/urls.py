@@ -10,7 +10,7 @@ urlpatterns = patterns('',
     url(r'^about$', 'medi.views.about'),
     url(r'^login$', 'medi.views.login_view'),
     url(r'^register$', 'medi.views.sign_up'),
-
+    url(r'^logout$', 'medi.views.logout_view'),
 
     #url(r'^upload/$', 'video_converter.views.upload'),
     #url(r'^s3direct/', include('s3direct.urls')),
