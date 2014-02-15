@@ -1,0 +1,11 @@
+sudo adduser <username>
+
+sudo su - <username>
+
+ssh-keygen -t rsa
+
+mkdir ~/.ssh
+cat <filename>.pub >> ~/.ssh/authorized_keys
+
+chmod 700 ~/.ssh
+chmod 600 ~/.ssh/authorized_keys
